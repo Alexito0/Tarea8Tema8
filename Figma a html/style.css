@@ -1,0 +1,184 @@
+/* Estilos generales de la página */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    background: orange;
+}
+
+#header {
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 0px;
+    height: 30%;
+    background: #B1B1B1;
+    padding: 1%;
+}
+
+#image1 {
+    position: absolute;
+    width: 752px;
+    height: 246px;
+    left: 324px;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#naranja {
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: orange;
+}
+
+#hero {
+    font-family: 'Patrick Hand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    border: 1px solid #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#buttons {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#img {
+    width: 30%;
+    margin-left: 9%;
+}
+
+#img2 {
+    width: 30%;
+    margin-left: 24%;
+}
+
+#boton1 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: 2px solid #4CAF50; /* Borde verde */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+video {
+    margin-left: 22%;
+}
+
+#slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    float: left;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide img {
+    width: 30%;
+    margin-left: 24%;
+    height: auto;
+}
+
+/* Add animation styles */
+@keyframes slide {
+    from { margin-left: 20%; }
+    to { margin-left: -40%; }
+}
+
+#slider .slide {
+    animation: slide 3s infinite;
+}
+
+/* Add hover effect to pause the slider on mouse over */
+#slider:hover .slide {
+    animation-play-state: paused;
+}
+
+
+/* Estilos para los botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: 2px solid #4CAF50; /* Borde verde */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049; /* Cambia a un verde más oscuro al pasar el ratón */
+    color: white;
+}
+
+/* Aplicar los estilos a los botones de navegación existentes */
+#buttons button {
+    margin-left: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#buttons button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* Agrega una clase para la animación */
+.animated {
+    opacity: 0;
+    animation: fadeIn ease-in-out 1.5s forwards;
+}
+
+/* Define la animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

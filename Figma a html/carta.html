@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Página</title>
+</head>
+<body class="animated">
+    <audio id="audio">
+        <source src="vid/the-flashback_60sec-2-174160.mp3" type="audio/mpeg">
+    </audio> 
+    <div id="header">
+        <div id="image">
+            <img src="imagenes/PacoRes.ico" alt="Imagen">
+        </div>
+        <div id="buttons">
+            <button onclick="location.href='historia.html'">Historia</button>
+            <button onclick="location.href='carta.html'">Carta</button>
+            <button onclick="location.href='index.html'">Principal</button>
+        </div>
+    </div>
+    <div id="naranja">
+        <div id = "text">
+            <h1>1 Plato 5€</h1>
+            <h1>2 Platos 8€</h1>
+            <h1>3 Platos 12€</h1>
+            <p>Pedidos de mas de 3 platos solo en restaurante</p>
+        </div>
+        <div id = "boton1">
+            <button onclick="location.href='cesta.html'">Crear cesta</button>
+        </div>      
+    </div>
+    <div id="slider">
+        <div class="slide"><img src="imagenes/mar.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/carn.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/1.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/2.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/3.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/4.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/5.jpg" alt="Imagen"></div>
+        <div class="slide"><img src="imagenes/6.jpg" alt="Imagen"></div>
+    </div>  
+    <footer>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Restaurante Paco</span> by <span property="cc:attributionName">Alejandro Rodríguez</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
+    </footer>
+    <script>
+        const slider = document.getElementById("slider");
+        const slides = document.querySelectorAll(".slide");
+    
+        let currentSlide = 0;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? "block" : "none";
+            });
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        setInterval(nextSlide, 3000);
+    </script>    
+</body>
+</html>
